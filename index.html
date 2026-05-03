@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🌸 PINK TRACK 🌸</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- 🌸 FIXED HEADER -->
+<header class="header">
+    <h1 class="logo">🌸 PINK TRACK 🌸</h1>
+    <p>Track your cycle in a smart & beautiful way</p>
+</header>
+
+<div class="container">
+
+<!-- INPUT -->
+<div class="card glass">
+    <h2>Cycle Details</h2>
+
+    <label>Start Date</label>
+    <input type="date" id="lastDate">
+
+    <label>Cycle Length</label>
+    <input type="number" id="cycleLength" value="28">
+
+    <label>Period Duration</label>
+    <input type="number" id="periodDuration" value="5">
+
+    <button onclick="calculateCycle()">✨ Calculate</button>
+</div>
+
+<!-- PREDICTIONS -->
+<div class="card glass prediction-box">
+    <h2>Predictions</h2>
+
+    <div class="prediction-item">📅 Next Period: <span id="nextPeriod">-</span></div>
+    <div class="prediction-item">🌼 Ovulation: <span id="ovulation">-</span></div>
+    <div class="prediction-item">💚 Fertile Window: <span id="fertile">-</span></div>
+</div>
+
+
+<!-- MOOD -->
+<div class="card glass">
+    <h2>Mood Tracker</h2>
+    <div class="moods">
+        <button onclick="saveMood('Happy')">😊</button>
+        <button onclick="saveMood('Sad')">😔</button>
+        <button onclick="saveMood('Irritated')">😡</button>
+        <button onclick="saveMood('Tired')">😴</button>
+    </div>
+</div>
+
+<!-- NOTES -->
+<div class="card glass notes-box">
+    <h2>Notes</h2>
+    <textarea id="notes" placeholder="Write your thoughts... 💖"></textarea>
+    <button onclick="saveNotes()">💾 Save</button>
+</div>
+
+</div>
+
+
+<button class="about-btn" onclick="openBox()">About Me</button>
+
+<div class="popup" id="aboutBox">
+    <div class="popup-box">
+        <h2>About Me </h2>
+        <p>
+            Hey, I am Sunidhi Mahajan <br><br>
+            🎓 First Year BTech Student who made a project "PINK TRACKER". 
+            Pink Track is a simple and user-friendly web application designed to help users track their menstrual cycle easily. It allows users to enter basic cycle details like start date, cycle length, and period duration to predict the next period, ovulation day, and fertile window.
+The application also includes additional features like a mood tracker and personal notes section, enabling users to monitor both physical and emotional health in one place.
+Built using HTML, CSS, and JavaScript, the project focuses on a clean UI with a soft aesthetic design, making it both functional and visually appealing.<br>
+            
+        </p>
+        <button onclick="closeBox()">Close</button>
+    </div>
+</div>
+
+<footer>Made by Sunidhi!</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
